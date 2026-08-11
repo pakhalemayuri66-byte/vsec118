@@ -1,51 +1,70 @@
+
+
 // Create Canvas
 let canvas = document.createElement("canvas");
 
 canvas.id = "myCanvas";
-canvas.width = 1500;
-canvas.height = 1000;
+canvas.width = 800;
+canvas.height = 500;
 canvas.style.border = "1px solid black";
 
 document.body.appendChild(canvas);
 
+
 // Get Canvas Context
 let ctx = canvas.getContext("2d");
 
-// Add Click Event
-canvas.addEventListener("click", sparkle);
 
-// Sparkle Function
-function sparkle(event) {
+// Ball Properties
+let x = 100;
+let y = 100;
 
-    let x = event.offsetX;
-    let y = event.offsetY;
+let radius = 30;
 
-    for (let i = 0; i < 5; i++) {
+let dx = 3;
+let dy = 3;
 
-        let sx = x + Math.random() * 40 - 20;
-        let sy = y + Math.random() * 40 - 20;
 
-        drawStar(sx, sy);
+// Animation Function
+function animate() {
+
+    // Clear Canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+    // Draw Ball
+    ctx.beginPath();
+
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+
+    ctx.fillStyle = "blue";
+
+    ctx.fill();
+
+    ctx.closePath();
+
+
+    // Move Ball
+    x += dx;
+    y += dy;
+
+
+    // Bounce from left and right
+    if (x + radius > canvas.width || x - radius < 0) {
+        dx = -dx;
     }
+
+
+    // Bounce from top and bottom
+    if (y + radius > canvas.height || y - radius < 0) {
+        dy = -dy;
+    }
+
+
+    // Repeat Animation
+    requestAnimationFrame(animate);
 }
 
-// Draw Star Function
-function drawStar(x, y) {
 
-    ctx.font = "30px Arial";
-    ctx.fillStyle = "gold";
-
-    ctx.fillText("★", x, y);
-
-    // Remove star after 400 milliseconds
-    setTimeout(function () {
-
-        ctx.clearRect(
-            x - 20,
-            y - 40,
-            60,
-            60
-        );
-
-    }, 400);
-}
+// Start Animation
+animate();
