@@ -1,40 +1,51 @@
+```css
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px;
 
-    font-family: Arial, sans-serif;
-
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 30px;
 }
 
-.login-box {
+/* Login Box and Contact Form */
+.login-box,
+.contact-form {
     width: 350px;
-    padding: 40px;
+    padding: 30px;
 
     background: white;
     border-radius: 15px;
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-
-    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.login-box h2 {
+/* Heading */
+.login-box h2,
+.contact-form h2 {
+    text-align: center;
     margin-bottom: 25px;
     color: #333;
 }
 
-.login-box input {
+/* Input Fields */
+.login-box input,
+.contact-form input {
     width: 100%;
     padding: 12px;
+
     margin-bottom: 15px;
 
     border: 1px solid #ccc;
@@ -44,11 +55,15 @@ body {
     outline: none;
 }
 
-.login-box input:focus {
+/* Input Focus */
+.login-box input:focus,
+.contact-form input:focus {
     border-color: #667eea;
 }
 
-.login-box button {
+/* Buttons */
+.login-box button,
+.contact-form button {
     width: 100%;
     padding: 12px;
 
@@ -62,15 +77,20 @@ body {
     cursor: pointer;
 }
 
-.login-box button:hover {
-    background: #764ba2;
+/* Button Hover */
+.login-box button:hover,
+.contact-form button:hover {
+    background: #4f46e5;
 }
 
+/* Paragraph */
 .login-box p {
+    text-align: center;
     margin-top: 20px;
-    color: #666;
+    color: #555;
 }
 
+/* Sign Up Link */
 .login-box a {
     color: #667eea;
     text-decoration: none;
@@ -80,3 +100,17 @@ body {
 .login-box a:hover {
     text-decoration: underline;
 }
+
+/* Mobile Responsive */
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+
+    .login-box,
+    .contact-form {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+```
