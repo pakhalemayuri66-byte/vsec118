@@ -71,17 +71,17 @@ It allows you to make changes without directly affecting the main project.
 
 Important Git Commands
 Command	Use
-git init	        Create a Git repository
-git status	        Check changes
-git add .	        Add all changes to staging
-git add file	    Add a specific file
-git commit -m "message" 	Save changes
-git push	       Upload commits
-git pull	       Get remote changes
-git clone	       Copy a remote repository
-git branch	       View branches
-git branch name	   Create a branch
-git switch name	   Switch branch
-git merge name	   Merge a branch
-git log	View commit  history
-git remote -v	   View remote repository
+- git init	        Create a Git repository
+- git status	        Check changes
+- git add .	        Add all changes to staging
+- git add file	    Add a specific file
+- git commit -m "message" 	Save changes
+- git push	       Upload commits
+- git pull	       Get remote changes
+- git clone	       Copy a remote repository
+- git branch	       View branches
+- git branch name	   Create a branch
+- git switch name	   Switch branch
+- git merge name	   Merge a branch
+- git log	View commit  history
+- git remote -v	   View remote repository
