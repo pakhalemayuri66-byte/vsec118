@@ -1,6 +1,6 @@
 # assignment no 2
 
- 1. What is Git?
+## 1. What is Git?
 
 Git is a distributed version control system (DVCS) used to track changes in files and manage source code.
 
@@ -12,7 +12,7 @@ Recover previous versions
 Work on different features
 Collaborate with other developers
 
-2. What is GitHub?
+## 2. What is GitHub?
 
 GitHub is an online platform where Git repositories can be stored and shared.
 
@@ -21,11 +21,11 @@ In simple words:
 Git = tool used on your computer
 GitHub = online platform where your Git project is stored
 
-3. What is a Repository?
+## 3. What is a Repository?
 
 A repository (repo) is a folder that contains your project files along with Git's version history.
 
-4. What is Commit?
+## 4. What is Commit?
 
 A commit is a saved record of changes in your project.
 
@@ -36,13 +36,14 @@ git commit -m "Updated CSS design"
 
 The message "Updated CSS design" describes what you changed.
 
-5. What is Push?
+## 5. What is Push?
 
 Push sends your local commits from your computer to GitHub.
 
 git push origin main
 Computer → GitHub
-6. What is Pull?
+
+## 6. What is Pull?
 
 Pull gets changes from GitHub and brings them to your computer.
 
@@ -62,7 +63,7 @@ GitHub Repository
        ↓
 Your Computer
 
-8. What is Branch?
+## 8. What is Branch?
 A branch is a separate version or line of development of a project.
 
 It allows you to make changes without directly affecting the main project.
