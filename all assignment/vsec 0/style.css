@@ -1,0 +1,77 @@
+```css
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 60px;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Heading */
+h1 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+/* Assignment Box */
+.assignment {
+    margin: 10px;
+}
+
+/* Assignment Links */
+.assignment a {
+    display: block;
+
+    width: 300px;
+    padding: 15px;
+
+    background-color: white;
+    color: #333;
+
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.assignment a:hover {
+    background-color: #333;
+    color: white;
+
+    transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .assignment a {
+        width: 250px;
+    }
+}
+```
